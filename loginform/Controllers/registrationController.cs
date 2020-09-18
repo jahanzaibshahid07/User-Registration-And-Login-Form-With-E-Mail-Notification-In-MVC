@@ -57,6 +57,7 @@ namespace loginform.Controllers
             return View();
         }
 
+
         public ActionResult UserVerification(string id)
         {
             try
@@ -90,6 +91,7 @@ namespace loginform.Controllers
             return View();
         }
 
+        
         // GET: login
         public ActionResult Login()
         {
@@ -141,35 +143,5 @@ namespace loginform.Controllers
         }
 
 
-        public ActionResult ForgetPassword()
-        {
-            return View();
-        }
-
-
-        [HttpPost]
-        public ActionResult ForgetPassword(ForgetPassword pass)
-        {
-            var IsExists = email.IsEmailExists(pass.EmailId);
-            if (!IsExists)
-            {
-                ModelState.AddModelError("EmailNotExists", "This email is not exists");
-                return View();
-            }
-            var objUsr = q.UserMs.Where(x => x.Email == pass.EmailId).FirstOrDefault();
-
-            // Genrate OTP   
-            string OTP = email.GeneratePassword();
-
-            objUsr.ActivetionCode = Guid.NewGuid();
-            objUsr.OTP = OTP;
-            q.Entry(objUsr).State = System.Data.EntityState.Modified;
-            q.SaveChanges();
-
-            email.ForgetPasswordEmailToUser(objUsr.Email, objUsr.ActivetionCode.ToString(), objUsr.OTP);
-            return View();
-        }
-
-       
     }
 }
