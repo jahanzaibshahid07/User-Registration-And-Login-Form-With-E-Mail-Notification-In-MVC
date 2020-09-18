@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Signin";
+}
+
+<h2>Signin</h2>
+
+Hello, @HttpContext.Current.User.Identity.Name
+
+@if (Request.IsAuthenticated)
+{
+    <a href='@Url.Action("Logout", "registration")' onclick='navigate(this.href);'>
+        <input style="float: right;" type="button" value='Logout' />
+    </a>
+}  

@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "UserVerification";
+}
+
+<h2>User Verification Process</h2>
+
+@try
+{
+    if (ViewBag.Status == true)
+    {
+        <div class="danger alert-success">
+            <strong>Message..!!</strong>  @ViewBag.Message,  please click here to Login @Html.ActionLink("Login", "Login", "Registration")
+        </div>
+    }
+    else
+    {
+        <div class="danger alert-danger">
+            <strong>Message..!!</strong>  @ViewBag.Message
+        </div>
+    }
+}
+catch (Exception)
+{
+    <div class="danger alert-danger">
+        <strong>Message..!!</strong>  @ViewBag.Message
+    </div>
+}
