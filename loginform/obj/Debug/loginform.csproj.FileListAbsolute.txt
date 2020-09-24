@@ -30,7 +30,6 @@ C:\Users\Haris Baig\source\repos\loginform\loginform\bin\roslyn\VBCSCompiler.exe
 C:\Users\Haris Baig\source\repos\loginform\loginform\bin\Antlr3.Runtime.dll
 C:\Users\Haris Baig\source\repos\loginform\loginform\bin\EntityFramework.dll
 C:\Users\Haris Baig\source\repos\loginform\loginform\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\Haris Baig\source\repos\loginform\loginform\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\Haris Baig\source\repos\loginform\loginform\bin\Newtonsoft.Json.dll
 C:\Users\Haris Baig\source\repos\loginform\loginform\bin\System.Web.Helpers.dll
 C:\Users\Haris Baig\source\repos\loginform\loginform\bin\System.Web.Mvc.dll
@@ -51,7 +50,5 @@ C:\Users\Haris Baig\source\repos\loginform\loginform\bin\System.Web.WebPages.xml
 C:\Users\Haris Baig\source\repos\loginform\loginform\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Haris Baig\source\repos\loginform\loginform\bin\System.Web.WebPages.Razor.xml
 C:\Users\Haris Baig\source\repos\loginform\loginform\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Haris Baig\source\repos\loginform\loginform\obj\Debug\loginform.csproj.CoreCompileInputs.cache
-C:\Users\Haris Baig\source\repos\loginform\loginform\obj\Debug\loginform.csproj.CopyComplete
 C:\Users\Haris Baig\source\repos\loginform\loginform\obj\Debug\loginform.dll
 C:\Users\Haris Baig\source\repos\loginform\loginform\obj\Debug\loginform.pdb

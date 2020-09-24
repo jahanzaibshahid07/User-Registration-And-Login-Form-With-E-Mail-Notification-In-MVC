@@ -21,8 +21,8 @@ namespace loginform.Models
                 var GenarateUserVerificationLink = "/registration/UserVerification/" + activationCode;
                 var link = HttpContext.Current.Request.Url.AbsoluteUri.Replace(HttpContext.Current.Request.Url.PathAndQuery, GenarateUserVerificationLink);
 
-                var fromMail = new MailAddress("jahanzaibshahiddeveloper@gmail.com", "SRED"); // set your email  
-                var fromEmailpassword = "imbsd@ilc#"; // Set your password   
+                var fromMail = new MailAddress("", "SRED"); // set your email  
+                var fromEmailpassword = ""; // Set your password   
                 var toEmail = new MailAddress(emailId);
 
                 var smtp = new SmtpClient();
