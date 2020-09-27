@@ -61,7 +61,7 @@ namespace loginform.Controllers
         }
 
 
-        public ActionResult UserVerification(string id)
+        public ActionResult userverification(string id)
         {
             try
             {
@@ -205,6 +205,8 @@ namespace loginform.Controllers
         {
             try
             {
+                string avcode = ch.ActivationCode.Trim();
+              
 
                 var objUsr = q.UserMs.Where(x => x.OTP == ch.OTP).FirstOrDefault();
 
@@ -217,7 +219,7 @@ namespace loginform.Controllers
                 }
                 else
                 {
-                    if (ch.OTP == objUsr.OTP && ch.ActivationCode.ToString() == objUsr.ActivetionCode.ToString())
+                    if (ch.OTP == objUsr.OTP && avcode.ToString() == objUsr.ActivetionCode.ToString())
                     {
                         var _passWord = encryptPassword.texttoExcript(ch.Password);
                         objUsr.Password = _passWord;

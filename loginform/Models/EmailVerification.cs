@@ -17,9 +17,8 @@ namespace loginform.Models
         {
             try
             {
-
-                var GenarateUserVerificationLink = "/registration/UserVerification/" + activationCode;
-                var link = HttpContext.Current.Request.Url.AbsoluteUri.Replace(HttpContext.Current.Request.Url.PathAndQuery, GenarateUserVerificationLink);
+                var GenarateUserVerificationLink = "registration/userverification/" + activationCode;
+                var link = HttpContext.Current.Request.Url.AbsoluteUri + GenarateUserVerificationLink;
 
                 var fromMail = new MailAddress("jahanzaibshahiddeveloper@gmail.com", "SRED"); // set your email  
                 var fromEmailpassword = "imbsd@ilc#"; // Set your password   
@@ -39,7 +38,7 @@ namespace loginform.Models
                                "<br/> please click on the below link for account verification" +
                                "<br/><br/><a href=" + link + ">" + link + "</a>";
                 Message.IsBodyHtml = true;
-                smtp.Send(Message);
+                smtp.Send(Message);  
 
             }
             catch (Exception)
